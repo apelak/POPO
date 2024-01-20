@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+#schedule-container {
+    max-width: 800px;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#schedule-table th, #schedule-table td {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#schedule-table th {
+    background-color: #007BFF;
+    color: white;
+}
+
+#schedule-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.time-slot {
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.time-slot.available {
+    background-color: #28a745;
+}
+
+.time-slot.unavailable {
+    background-color: #dc3545;
+}
+
+#prevWeekButton, #nextWeekButton {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#reservationModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Reszta Twojego kodu CSS... */

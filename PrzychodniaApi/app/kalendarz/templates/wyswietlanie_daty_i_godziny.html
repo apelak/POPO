@@ -1,0 +1,32 @@
+{% load custom_filteres %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Harmonogram Tygodniowy</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'stylekalendarz.css' %}">
+    <script src="{% static 'sciptkalendarz.js' %}" defer></script>
+</head>
+<body>
+    <div id="schedule-container">
+        <!-- Przyciski i tabela -->
+        <table id="schedule-table">
+            <!-- Nagłówek tabeli -->
+            <tbody>
+                {% for hour in godziny %}
+                <tr>
+                    <td>{{ hour }}</td>
+                    {% for day in dni_tygodnia %}
+                    <td>
+                        <button class="time-slot" id="slot-{{ day }}-{{ hour|replace_colon }}"></button>
+                    </td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <!-- Skrypty -->
+</body>
+</html>
